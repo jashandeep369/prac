@@ -150,3 +150,7 @@ console.log(`the ticket number of 3st customerc. is: ${ticket_to_customer()}`)
 number = 332_34343_423_23423_4242_423n
 
 console.log(typeof number)
+
+speed_warning = speed => `you are good at ${speed}mph`
+
+console.log(speed_warning(120))
