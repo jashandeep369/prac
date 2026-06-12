@@ -151,6 +151,73 @@ number = 332_34343_423_23423_4242_423n
 
 console.log(typeof number)
 
-speed_warning = speed => `you are good at ${speed}mph`
+speed_warning = (speed_limit,speed) => { 
+  
+  if (speed > speed_limit)
+    {`you are not goof at ${speed}mph`}
+  else {
+    "you are good"
+  }
+}
 
-console.log(speed_warning(120))
+console.log(speed_warning(40,120))
+
+distance_travel_miles = [255,233,444,555]
+distance_travel_km = distance_travel_miles.map(distance => Math.round(distance*1.4)) 
+
+const characters = [
+    {
+        title: 'Ninja',
+        emoji: '🥷',
+        powers: ['agility', 'stealth', 'aggression'],
+    },
+    {
+        title: 'Sorcerer',
+        emoji: '🧙',
+        powers: ['magic', 'invisibility', 'necromancy'],
+    },
+    {
+        title: 'Ogre',
+        emoji: '👹',
+        powers: ['power', 'stamina', 'shapeshifting'],
+    },
+    {
+        title: 'Unicorn',
+        emoji: '🦄',
+        powers: [ 'flight', 'power', 'purity'],
+    }
+]
+for (let character of characters){
+    for (let power of character.powers){
+        console.log(power)
+    }
+  }
+  const character1 = {
+    title: 'Ninja',
+    emoji: '🥷',
+    powers: ['agility', 'stealth', 'aggression'],
+}
+
+for (let property in character1) {
+    console.log(character1[property])
+
+}
+characters.forEach(function(character){
+    character.powers.forEach(function(power){
+        console.log(power)
+    })
+
+  })
+  characters.forEach(function(character, index){
+    console.log(index, character.title)
+})
+
+const distanceWalkedMilesArr = [140, 153, 161, 153, 128, 148]
+
+const conversionFactorMilesToKm = 1.6
+
+const distanceWalkedKmArr = distanceWalkedMilesArr.map(function(distanceMiles, index){
+    return `Month ${index}: ${distanceMiles * conversionFactorMilesToKm}`
+})
+
+console.log(distanceWalkedKmArr)
